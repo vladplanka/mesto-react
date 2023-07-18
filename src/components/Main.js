@@ -26,7 +26,7 @@ function Main({ onEditProfile, onAddPlace, onEditAvatar, onImagePopup }) {
       .then((cards) => {
         setCards(
           cards.map((card) => ({
-            id: cards._id,
+            id: card._id,
             src: card.link,
             title: card.name,
             likes: card.likes.length
@@ -36,7 +36,7 @@ function Main({ onEditProfile, onAddPlace, onEditAvatar, onImagePopup }) {
       .catch((error) => {
         console.log(error);
       })
-  }, []);
+  });
 
   return (
     <main className="content">
